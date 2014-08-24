@@ -8,7 +8,7 @@ ghc: 7.6
 before_install:
 - sudo apt-get update
 - sudo apt-get install coq
-- sudo apt-get install cabal-install
+- export PATH=/usr/local/ghc/$(ghc_find 7.6)/bin/:$PATH
 - cabal update
 - cabal install Agda --preference 'Agda == 2.4.0.*'
 
