@@ -5,8 +5,9 @@ jdk:
   - oraclejdk7
 
 before_install:
+- sudo add-apt-repository -y "deb http://http.us.debian.org/debian/ testing non-free contrib main"
 - sudo apt-get update
-- sudo apt-get install agda-bin
+- sudo apt-get install agda-bin==2.4.0.2-2
 - sudo apt-get install coq
 
 sbt_args: -J-Xms512M -J-Xmx1500M -J-Xss2M -XX:MaxPermSize=724M
