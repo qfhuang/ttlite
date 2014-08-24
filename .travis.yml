@@ -3,13 +3,14 @@ scala:
   - 2.11.0
 jdk:
   - oraclejdk7
+ghc: 7.6
 
 before_install:
 - sudo apt-get update
 - sudo apt-get install coq
 - sudo apt-get install cabal-install
 - cabal update
-- cabal install agda
+- cabal install Agda --preference 'Agda == 2.4.0.*'
 
 sbt_args: -J-Xms512M -J-Xmx1500M -J-Xss2M -XX:MaxPermSize=724M
 
